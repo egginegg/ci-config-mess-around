@@ -64,4 +64,10 @@ jobs:
     # TODO: Add steps to run formatting steps and type checking
     - name: Format with ruff
       run: |
-        uvx ruff format --check
+        uvx ruff format 
+    - name: Type check with typing
+      run: |
+        uvx ty check
+    - name: sort imports with isort
+      run: |
+        uvx isort .
